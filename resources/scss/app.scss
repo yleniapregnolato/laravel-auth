@@ -3,3 +3,10 @@
 .ms_date {
     width: 10%;
 }
+
+p {
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
