@@ -4,6 +4,12 @@
     <div class="container">
         <h1 class="mt-4">DETTAGLI DEL PROGETTO:</h1>
 
+        @if (session('message'))
+            <div class="alert alert-success">
+                {{ session('message') }}
+            </div>
+        @endif
+
         <div>
             <h3>Titolo:</h3>
             <p class="fw-bold">{{ $project->title }}</p>

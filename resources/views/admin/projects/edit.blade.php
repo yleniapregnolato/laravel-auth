@@ -4,7 +4,7 @@
     <div class="container">
         <h1 class="mt-4">Modifica:</h1>
 
-        <form action="{{ route('admin.projects.update', ['project'=>$project->slug]) }}" method="POST">
+        <form action="{{ route('admin.projects.update', ['project' => $project->slug]) }}" method="POST">
             @csrf
             @method('PUT')
 
@@ -20,7 +20,8 @@
 
             <div class="mb-3">
                 <label for="start_date" class="form-label">Data di inizio</label>
-                <input type="text" class="form-control" id="start_date" name="start_date" value="{{ $project->start_date }}">
+                <input type="text" class="form-control" id="start_date" name="start_date"
+                    value="{{ $project->start_date }}">
             </div>
 
             <div class="mb-3">
