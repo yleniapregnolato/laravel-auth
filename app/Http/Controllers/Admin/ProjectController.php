@@ -8,6 +8,7 @@ use GrahamCampbell\ResultType\Success;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
+
 class ProjectController extends Controller
 {
     /**
@@ -53,17 +54,20 @@ class ProjectController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Project $project)
     {
-        //
+        return view('admin.projects.edit', compact('project'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Project $project)
     {
-        //
+        $data = $request->all();
+        $project->slug = Str::slug($request->title);
+        $project->update($data);
+        return redirect()->route('admin.projects.show', ['project'=> $project->slug]);
     }
 
     /**

@@ -33,9 +33,7 @@
                             <td class="text-nowrap">
 
                                 <a class="btn btn-primary" href="{{ route('admin.projects.show', ['project'=>$project->slug]) }}">Dettagli</a>
-                                <button type="button" class="btn btn-outlime-primary p-0 ms-5">
-                                    <i class="fa-solid fa-pencil rounded-1 text-primary border border-primary p-2"></i>
-                                </button>
+                                <a href="{{ route('admin.projects.edit', ['project'=>$project->slug]) }}" type="button" class="btn btn-outlime-primary p-0 ms-5"><i class="fa-solid fa-pencil rounded-1 text-primary border border-primary p-2"></i></a>
                                 <button type="button" class="btn p-0" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                     <i class="fa-solid fa-trash border border-danger text-danger p-2 rounded-1"></i>
                                 </button>
