@@ -55,13 +55,13 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.project.index' ? 'bg-secondary' : '' }}"
-                                    href="{{ route('admin.project.index') }}">
+                                    href="{{ route('admin.projects.index') }}">
                                     <i class="fa-solid fa-tachometer-alt fa-lg fa-fw"></i> Progetti
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.project.create' ? 'bg-secondary' : '' }}"
-                                    href="{{ route('admin.project.create') }}">
+                                    href="{{ route('admin.projects.create') }}">
                                     <i class="fa-solid fa-plus"></i> Crea nuovo progetto
                                 </a>
                             </li>

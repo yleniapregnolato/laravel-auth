@@ -4,9 +4,11 @@
     width: 10%;
 }
 
-p {
+td {
+   p {
     width: 200px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+} 
 }
